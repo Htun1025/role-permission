@@ -1,0 +1,166 @@
+
+/* Create User Page */
+.create-user-page {
+  min-height: 100vh;
+  padding: 32px 20px;
+  background: var(--surface-ground);
+}
+
+/* Header */
+.create-user-header {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+
+.create-user-header h1 {
+  margin: 0 0 8px;
+  color: var(--text-color);
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.create-user-header p {
+  margin: 0;
+  color: var(--text-color-secondary);
+  font-size: 14px;
+}
+
+/* Form Card */
+.create-user-card {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px;
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+  background: var(--surface-card);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* Form */
+.create-user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.create-user-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.create-user-field label {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.create-user-field input,
+.create-user-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 14px;
+  border: 1px solid var(--surface-border);
+  border-radius: 9px;
+  outline: none;
+  background: var(--surface-card);
+  color: var(--text-color);
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.create-user-field input::placeholder {
+  color: var(--text-color-secondary);
+  opacity: 0.7;
+}
+
+.create-user-field input:focus,
+.create-user-field select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--primary-color) 15%, transparent);
+}
+
+/* Error */
+.create-user-error {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #f5b7b7;
+  border-radius: 8px;
+  background: #fff0f0;
+  color: #c62828;
+  font-size: 13px;
+}
+
+/* Actions */
+.create-user-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.create-user-submit,
+.create-user-cancel {
+  min-height: 44px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.create-user-submit {
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+.create-user-submit:hover:not(:disabled) {
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+
+.create-user-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.create-user-cancel {
+  border: 1px solid var(--surface-border);
+  background: var(--surface-card);
+  color: var(--text-color);
+}
+
+.create-user-cancel:hover {
+  background: var(--surface-hover);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .create-user-page {
+    padding: 20px 12px;
+  }
+
+  .create-user-header h1 {
+    font-size: 24px;
+  }
+
+  .create-user-card {
+    padding: 22px 18px;
+  }
+
+  .create-user-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .create-user-submit,
+  .create-user-cancel {
+    width: 100%;
+  }
+}
